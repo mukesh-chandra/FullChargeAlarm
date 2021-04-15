@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/pms" android:title="@string/mnu_pms"/>
+    <item android:id="@+id/shrr" android:title="@string/mnu_shr"/>
+    <item android:id="@+id/abt" android:title="@string/mnu_abt"/>
+    <item android:id="@+id/sett" android:title="@string/action_settings"/>
+    <item android:id="@+id/fdb" android:title="@string/mnu_err"/>
+</menu>

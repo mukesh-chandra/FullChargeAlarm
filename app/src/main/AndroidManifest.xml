@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="readytofire.fullchargealarm" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:hardwareAccelerated="false" android:name="com.readytofire.fullchargealarm.splash" android:screenOrientation="portrait" android:theme="@style/Spalsh">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.readytofire.fullchargealarm.MainActivity" android:screenOrientation="portrait"/>
+        <receiver android:enabled="true" android:name="com.readytofire.fullchargealarm.plgin" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="DoNotCleanAlarm"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.readytofire.fullchargealarm.AlarmService" android:process=".AlarmService" android:stopWithTask="false"/>
+        <activity android:label="Full Charge Alarm" android:name="com.readytofire.fullchargealarm.AlramDialog" android:screenOrientation="portrait" android:theme="@style/Spalsh"/>
+        <activity android:name="com.readytofire.fullchargealarm.etcdlg" android:screenOrientation="portrait" android:theme="@style/Spalsh"/>
+        <activity android:label="@string/pref_group3" android:name="com.readytofire.fullchargealarm.about" android:screenOrientation="portrait"/>
+        <activity android:name="com.readytofire.fullchargealarm.intro" android:screenOrientation="portrait" android:theme="@style/IntTheme"/>
+        <activity android:label="Low Battery Alarm" android:name="com.readytofire.fullchargealarm.lowdlg" android:screenOrientation="portrait" android:theme="@style/Spalsh"/>
+        <service android:enabled="true" android:exported="false" android:name="com.readytofire.fullchargealarm.batterylow" android:stopWithTask="false"/>
+        <activity android:label="@string/pref_header_general" android:name="com.readytofire.fullchargealarm.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/SettingsTheme"/>
+        <receiver android:enabled="true" android:name="com.readytofire.fullchargealarm.AlarmReceiver"/>
+        <receiver android:enabled="true" android:name="com.readytofire.fullchargealarm.BatlowRec"/>
+        <activity android:label="@string/lng_ttl" android:name="com.readytofire.fullchargealarm.langAct" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+       <!-- <provider android:authorities="com.readytofire.fullchargealarm.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider"/>-->
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

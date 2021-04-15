@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/grey" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/fc" android:background="@drawable/fullchrgalrm" android:layout_width="84dp" android:layout_height="84dp" android:layout_marginTop="30dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <androidx.cardview.widget.CardView android:id="@+id/card1" android:layout_width="match_parent" android:layout_height="400dp" android:layout_marginTop="20dp" android:layout_below="@+id/fc" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" app:cardBackgroundColor="#fff" app:cardCornerRadius="10dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/r" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                <TextView android:textSize="35sp" android:textColor="@color/black" android:id="@+id/btr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="progress" android:layout_centerInParent="true"/>
+                <ProgressBar android:id="@+id/p1" android:background="@drawable/round" android:layout_width="200dp" android:layout_height="200dp" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/progress" style="?android:attr/progressBarStyleHorizontal"/>
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/lba_tv_sz" android:textColor="@color/black" android:id="@+id/pr1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/full_txt1" android:layout_below="@+id/r" android:layout_centerHorizontal="true"/>
+            <TextView android:textSize="@dimen/lba_tv_sz" android:id="@+id/pr2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/full_des" android:layout_below="@+id/pr1" android:layout_centerHorizontal="true"/>
+            <Button android:textSize="17sp" android:textStyle="bold" android:textColor="#fff" android:id="@+id/stop" android:background="@color/orange" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Stop" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

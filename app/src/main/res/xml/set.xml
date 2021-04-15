@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <PreferenceCategory android:title="@string/pref_group1">
+        <Preference android:icon="@drawable/ic_font" android:title="@string/pref_title_locale" android:key="key_lang"/>
+        <Preference android:icon="@drawable/ic_battry_saver" android:title="@string/btry_sav_title" android:key="@string/key_btrysaver" android:summary="@string/btry_sav_sum"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_group4">
+        <SwitchPreference android:icon="@drawable/ic_afl" android:title="@string/pref_alm_fl" android:key="alm_full" android:summary="@string/pref_des_almfl" android:defaultValue="true"/>
+        <SwitchPreference android:icon="@drawable/ic_vib" android:title="@string/pref_title_display_name" android:key="key_vb" android:summary="@string/pref_description_social_recommendations" android:defaultValue="false"/>
+        <EditTextPreference android:icon="@drawable/ic_alm" android:persistent="true" android:maxLines="1" android:singleLine="true" android:selectAllOnFocus="true" android:maxLength="3" android:title="@string/pref_title_social_recommendations" android:key="example_text" android:defaultValue="@string/pref_default_flvl" android:inputType="numberDecimal"/>
+        <ListPreference android:icon="@drawable/ic_vol" android:entries="@array/pref_example_list_titles" android:title="@string/pref_title_add_friends_to_messages" android:key="example_list" android:defaultValue="1" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/pref_example_list_values"/>
+        <RingtonePreference android:icon="@drawable/ic_ton" android:title="@string/pref_title_ringtone" android:key="notifications_new_message_ringtone" android:defaultValue="Default" android:ringtoneType="notification"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_group2">
+        <SwitchPreference android:icon="@drawable/ic_alw" android:title="@string/pref_alm_lw" android:key="alm_low" android:summary="@string/pref_des_almlw" android:defaultValue="false"/>
+        <EditTextPreference android:icon="@drawable/ic_alm" android:selectAllOnFocus="true" android:maxLength="2" android:title="@string/pref_low_ttl" android:key="key_low_lvl" android:defaultValue="@string/pref_low_def" android:inputType="numberDecimal"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_group3">
+        <Preference android:icon="@drawable/ic_apv" android:title="@string/title_version" android:key="key_ab" android:summary="@string/app_version"/>
+        <Preference android:icon="@drawable/ic_fdb" android:title="@string/title_send_feedback" android:key="@string/key_feedback" android:summary="@string/summary_support"/>
+        <Preference android:icon="@drawable/ic_err" android:title="@string/error" android:key="@string/key_err"/>
+    </PreferenceCategory>
+</PreferenceScreen>

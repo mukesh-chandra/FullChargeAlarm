@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:icon="@drawable/ic_battry_saver" android:id="@+id/navigation_setting" android:title="@string/btn_set"/>
+    <item android:icon="@drawable/ic_alarm_off" android:id="@+id/navigation_stop_alarm" android:title="@string/btn_stpal"/>
+    <item android:icon="@drawable/ic_touch_app" android:id="@+id/navigation_pm" android:title="@string/mnu_pm"/>
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="fill" android:background="#1a1a22" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="@dimen/dia_w" android:layout_height="@dimen/dia_h">
+    <TextView android:textSize="@dimen/dia_tv_sz" android:textColor="#fff" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dia_tv1_mt" android:layout_below="@+id/textView" android:layout_alignStart="@+id/textView"/>
+    <TextView android:textSize="@dimen/dia_tv_sz" android:textColor="@color/colorTextLgt" android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@+id/imageView" android:layout_marginStart="@dimen/dia_tv2_m" android:layout_toEndOf="@+id/imageView"/>
+    <ImageView android:textColor="#fff" android:id="@+id/imageView" android:layout_width="@dimen/dia_iv_hw" android:layout_height="@dimen/dia_iv_hw" android:layout_marginTop="@dimen/dia_iv_mt" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/dia_iv_ml" android:layout_alignParentStart="true"/>
+</RelativeLayout>
